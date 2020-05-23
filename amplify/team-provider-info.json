@@ -1,0 +1,20 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-carddateapp-dev-152028-authRole",
+            "UnauthRoleArn": "arn:aws:iam::972126823319:role/amplify-carddateapp-dev-152028-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::972126823319:role/amplify-carddateapp-dev-152028-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-carddateapp-dev-152028-deployment",
+            "UnauthRoleName": "amplify-carddateapp-dev-152028-unauthRole",
+            "StackName": "amplify-carddateapp-dev-152028",
+            "StackId": "arn:aws:cloudformation:us-east-1:972126823319:stack/amplify-carddateapp-dev-152028/aecf9400-9c69-11ea-b43a-0ed5356bca17",
+            "AmplifyAppId": "dn6ukt5f9cktn"
+        },
+        "categories": {
+            "auth": {
+                "carddateapp041aadfd": {}
+            }
+        }
+    }
+}
