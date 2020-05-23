@@ -7,6 +7,7 @@ import { environment } from './environments/environment';
 // Amplify Configuration
 import Auth from '@aws-amplify/auth';
 import Storage from '@aws-amplify/storage';
+// fix build
 import AWSConfig from './aws-exports';
 Storage.configure(AWSConfig);
 Auth.configure(AWSConfig);
