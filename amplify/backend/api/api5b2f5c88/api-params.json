@@ -1,0 +1,48 @@
+{
+    "paths": [
+        {
+            "name": "/users",
+            "lambdaFunction": "carddateusers",
+            "privacy": {
+                "protected": true,
+                "auth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ],
+                "unauth": [
+                    "/POST",
+                    "/GET",
+                    "/PUT",
+                    "/PATCH",
+                    "/DELETE"
+                ]
+            }
+        }
+    ],
+    "resourceName": "api5b2f5c88",
+    "apiName": "api5b2f5c88",
+    "functionArns": [
+        {
+            "lambdaFunction": "carddateusers"
+        }
+    ],
+    "privacy": {
+        "auth": 1,
+        "unauth": 1,
+        "authRoleName": "amplify-carddateapp-dev-152028-authRole",
+        "unAuthRoleName": "amplify-carddateapp-dev-152028-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "carddateusers",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

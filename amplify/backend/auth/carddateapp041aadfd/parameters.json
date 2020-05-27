@@ -1,6 +1,6 @@
 {
     "identityPoolName": "carddateapp041aadfd_identitypool_041aadfd",
-    "allowUnauthenticatedIdentities": false,
+    "allowUnauthenticatedIdentities": true,
     "resourceNameTruncated": "cardda041aadfd",
     "userPoolName": "carddateapp041aadfd_userpool_041aadfd",
     "autoVerifiedAttributes": [
