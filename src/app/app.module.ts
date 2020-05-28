@@ -14,17 +14,19 @@ import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
 
 // import Amplify from 'aws-amplify';
 // import awsconfig from '../aws-exports';
-import {SignUpComponent} from './auth/sign-up/sign-up.component';
+
+import {AmplifyAngularModule} from 'aws-amplify-angular';
 
 /* Configure Amplify resources */
 // Amplify.configure(awsconfig);
 
 @NgModule({
-  declarations: [AppComponent, SignUpComponent],
+  declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule,
       FormsModule,
       ReactiveFormsModule,
+      AmplifyAngularModule,
       AmplifyUIAngularModule,
             IonicModule.forRoot(),
             AppRoutingModule],
