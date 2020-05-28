@@ -10,6 +10,15 @@
  */
 //@import '~aws-amplify-angular/theme.css';
 /* Core CSS required for Ionic components to work properly */
+ion-header{
+  background-color: #fe5f67;
+}
+ion-header.a {
+  color: white;
+}
+.header-margin{
+  margin: 15px;
+}
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
