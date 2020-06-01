@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../models/user';
+import {User} from '../shared/models/user';
 import {APIService} from '../API.service';
 import {Router} from '@angular/router';
 import {Auth} from 'aws-amplify';
