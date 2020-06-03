@@ -16,6 +16,8 @@ import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
 // import awsconfig from '../aws-exports';
 
 import {AmplifyAngularModule} from 'aws-amplify-angular';
+import { HeaderModule } from './shared/header/header.module';
+import {MenuComponent} from './shared/header/menu/menu.component';
 
 /* Configure Amplify resources */
 // Amplify.configure(awsconfig);
@@ -29,7 +31,8 @@ import {AmplifyAngularModule} from 'aws-amplify-angular';
       AmplifyAngularModule,
       AmplifyUIAngularModule,
             IonicModule.forRoot(),
-            AppRoutingModule],
+            AppRoutingModule,
+            HeaderModule],
   providers: [
     StatusBar,
     SplashScreen,

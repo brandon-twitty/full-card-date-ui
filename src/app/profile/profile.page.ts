@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from '../models/user';
-import {APIService} from '../API.service';
+import {User} from '../shared/models/user';
+import {APIService, CreateUserInput} from '../API.service';
 import {Router} from '@angular/router';
 import {Auth} from 'aws-amplify';
 
@@ -15,7 +15,7 @@ export class ProfilePage implements OnInit {
   imagePath: string;
   showPhoto: boolean;
   userCreated: boolean;
-  user = new User('', '', '', '', '', '', '');
+  user = new User('', '', '', '', '', '', '','');
   constructor(private api: APIService, public router: Router) { }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class ProfilePage implements OnInit {
       let result = await this.api.GetUser(this.userId);
       if (!result) {
         this.userCreated = false;
-        this.user = new User('', '', '', '', '', '','');
+        this.user = new User('', '', '', '', '', '','','');
       } else {
         this.userCreated = true;
         this.showPhoto = !!result.image;
@@ -51,7 +51,8 @@ export class ProfilePage implements OnInit {
   async updateProfile() {
     const user = {
       id: this.userId,
-      username: this.user.firstName + '_' + this.user.lastName,
+      username: this.user.username,
+      fullName: this.user.firstName + '_' + this.user.lastName,
       firstName: this.user.firstName,
       lastName: this.user.lastName,
       bio: this.user.aboutMe,
