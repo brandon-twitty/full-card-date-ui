@@ -452,6 +452,21 @@ textarea.wdac-input {
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
+.cd-avatar-profile {
+    width: 120px;
+    height: 120px;
+    display: block;
+
+    background: #fff;
+    -webkit-box-shadow: 0 1px 15px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 1px 15px -5px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
 .cd-avatar img {
     position: absolute;
     top: 3px;
