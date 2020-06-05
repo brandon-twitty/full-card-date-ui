@@ -10,6 +10,9 @@ mutation CreateUser(
     lastName
     bio
     image
+    createdAt
+    updatedAt
+    owner
   }
 }
 mutation UpdateUser(
@@ -23,6 +26,9 @@ mutation UpdateUser(
     lastName
     bio
     image
+    createdAt
+    updatedAt
+    owner
   }
 }
 mutation DeleteUser(
@@ -36,5 +42,8 @@ mutation DeleteUser(
     lastName
     bio
     image
+    createdAt
+    updatedAt
+    owner
   }
 }

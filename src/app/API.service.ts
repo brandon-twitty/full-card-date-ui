@@ -114,6 +114,9 @@ export type CreateUserMutation = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type UpdateUserMutation = {
@@ -124,6 +127,9 @@ export type UpdateUserMutation = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type DeleteUserMutation = {
@@ -134,6 +140,9 @@ export type DeleteUserMutation = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type GetUserQuery = {
@@ -144,6 +153,9 @@ export type GetUserQuery = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type ListUsersQuery = {
@@ -156,6 +168,9 @@ export type ListUsersQuery = {
     lastName: string | null;
     bio: string | null;
     image: string | null;
+    createdAt: string;
+    updatedAt: string;
+    owner: string | null;
   } | null> | null;
   nextToken: string | null;
 };
@@ -168,6 +183,9 @@ export type OnCreateUserSubscription = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type OnUpdateUserSubscription = {
@@ -178,6 +196,9 @@ export type OnUpdateUserSubscription = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 export type OnDeleteUserSubscription = {
@@ -188,6 +209,9 @@ export type OnDeleteUserSubscription = {
   lastName: string | null;
   bio: string | null;
   image: string | null;
+  createdAt: string;
+  updatedAt: string;
+  owner: string | null;
 };
 
 @Injectable({
@@ -207,6 +231,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -233,6 +260,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -259,6 +289,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -282,6 +315,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`;
     const gqlAPIServiceArguments: any = {
@@ -308,6 +344,9 @@ export class APIService {
             lastName
             bio
             image
+            createdAt
+            updatedAt
+            owner
           }
           nextToken
         }
@@ -329,8 +368,8 @@ export class APIService {
   }
   OnCreateUserListener: Observable<OnCreateUserSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnCreateUser {
-        onCreateUser {
+      `subscription OnCreateUser($owner: String!) {
+        onCreateUser(owner: $owner) {
           __typename
           id
           username
@@ -338,6 +377,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`
     )
@@ -345,8 +387,8 @@ export class APIService {
 
   OnUpdateUserListener: Observable<OnUpdateUserSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnUpdateUser {
-        onUpdateUser {
+      `subscription OnUpdateUser($owner: String!) {
+        onUpdateUser(owner: $owner) {
           __typename
           id
           username
@@ -354,6 +396,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`
     )
@@ -361,8 +406,8 @@ export class APIService {
 
   OnDeleteUserListener: Observable<OnDeleteUserSubscription> = API.graphql(
     graphqlOperation(
-      `subscription OnDeleteUser {
-        onDeleteUser {
+      `subscription OnDeleteUser($owner: String!) {
+        onDeleteUser(owner: $owner) {
           __typename
           id
           username
@@ -370,6 +415,9 @@ export class APIService {
           lastName
           bio
           image
+          createdAt
+          updatedAt
+          owner
         }
       }`
     )

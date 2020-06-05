@@ -7,6 +7,9 @@ query GetUser($id: ID!) {
     lastName
     bio
     image
+    createdAt
+    updatedAt
+    owner
   }
 }
 query ListUsers(
@@ -22,6 +25,9 @@ query ListUsers(
       lastName
       bio
       image
+      createdAt
+      updatedAt
+      owner
     }
     nextToken
   }

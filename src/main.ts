@@ -5,6 +5,7 @@ import { AppModule } from './app/app.module';
 import { environment } from './environments/environment';
 
 // Amplify Configuration
+import PubSub from '@aws-amplify/pubsub';
 import Auth from '@aws-amplify/auth';
 import Storage from '@aws-amplify/storage';
 // fix build
