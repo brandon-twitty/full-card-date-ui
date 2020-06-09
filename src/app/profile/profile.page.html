@@ -1,9 +1,58 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>profile</ion-title>
+    <ion-title>
+      profile
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
 
+
+<ion-content [fullscreen]="true" >
+
+
+        <section>
+        <div class="cstl-main-content-margin row">
+            <ion-avatar class="header-margin cd-avatar ion-margin-bottom">
+              <!--<amplify-s3-image [path] ="user.imageUrl" [options]="{'level':'private'}"></amplify-s3-image>-->
+            </ion-avatar>
+              <!--<amplify-photo-picker></amplify-photo-picker>-->
+        </div >
+        </section>
+    <section class="container">
+
+      <div class="row wdac-container container">
+          <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
+              <div class="wdac-form-field wdac-dropshadow">
+
+              <input placeholder="First Name" type="text" class="form-control wdac-input" id="firstName" name="firstName" [(ngModel)]="user.firstName">
+              </div>
+          </div>
+      </div>
+       <div>
+           <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
+               <div class="wdac-form-field wdac-dropshadow">
+
+          <input placeholder="Last Name" type="text" class="form-control wdac-input" id="lastName" name="lastName" [(ngModel)]="user.lastName">
+               </div>
+      </div>
+       </div>
+      <div>
+          <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
+              <div class="wdac-form-field wdac-dropshadow">
+
+          <input placeholder="Phone Number" type="text" class="form-control wdac-input" id="phoneNumber" name="phoneNumber" [(ngModel)]="user.phoneNumber">
+              </div>
+      </div>
+      </div>
+      <div>
+      <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
+          <div class="wdac-form-field wdac-dropshadow">
+              <input placeholder="About Me" type="text" class="form-control wdac-input" id="aboutMe" name="aboutMe" [(ngModel)]="user.aboutMe">
+          </div>
+      </div>
+      </div>
+      <button  class="uk-button uk-button-grey uk-width-1-1">Register</button>
+    </section>
 </ion-content>
+

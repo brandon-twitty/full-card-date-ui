@@ -60,7 +60,7 @@
 				"Timeout": "25",
 				"Code": {
 					"S3Bucket": "amplify-carddateapp-dev-152028-deployment",
-					"S3Key": "amplify-builds/S3Triggerf81f33b7-3258623767754d30614d-build.zip"
+					"S3Key": "amplify-builds/S3Triggerf81f33b7-44736a58357256377230-build.zip"
 				}
 			}
 		},

@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "profileApi",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authcarddateapp041aadfd",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
