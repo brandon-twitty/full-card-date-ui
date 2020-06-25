@@ -34,6 +34,7 @@
     "hammerjs": "^2.0.8",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
+    "uikit": "^3.5.5-dev.f97109e60",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
