@@ -28,12 +28,14 @@
     "@ionic/angular": "^5.0.0",
     "@types/chart.js": "^2.9.21",
     "aws-amplify": "^3.0.16",
-    "aws-amplify-angular": "^5.0.14",
+    "aws-amplify-angular": "^5.0.19",
     "chart.js": "^2.5.0",
     "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
+    "jquery": "^3.5.1",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
+    "uikit": "^3.5.4",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
