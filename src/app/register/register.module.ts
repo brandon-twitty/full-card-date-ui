@@ -10,6 +10,7 @@ import {AuthComponent} from './auth/auth.component';
 import {RouterModule} from '@angular/router';
 import Amplify from 'aws-amplify';
 import awsconfig from '../../aws-exports';
+import {HeaderModule} from '../shared/header/header.module';
 
 Amplify.configure(awsconfig);
 @NgModule({
@@ -20,7 +21,8 @@ Amplify.configure(awsconfig);
     RouterModule,
     RegisterPageRoutingModule,
     AmplifyUIAngularModule,
-    AmplifyIonicModule
+    AmplifyIonicModule,
+      HeaderModule
   ],
   providers: [AmplifyService],
   declarations: [RegisterPage, AuthComponent]

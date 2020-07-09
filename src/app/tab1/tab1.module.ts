@@ -6,13 +6,15 @@ import { Tab1Page } from './tab1.page';
 
 
 import { Tab1PageRoutingModule } from './tab1-routing.module';
+import {HeaderModule} from '../shared/header/header.module';
 
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    Tab1PageRoutingModule
+    Tab1PageRoutingModule,
+      HeaderModule
   ],
   declarations: [Tab1Page]
 })
