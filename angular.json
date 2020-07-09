@@ -32,22 +32,33 @@
               }
             ],
             "styles": [
+              "src/styles/style.scss",
               {
                 "input": "src/theme/variables.scss"
+              },
+              {
+                "input": "node_modules/font-awesome/css/font-awesome.css"
               },
               {
                 "input": "src/global.scss"
               },
               {
                 "input": "src/datecard.scss"
-              },
-              {
-                "input": "node_modules/font-awesome/css/font-awesome.css"
               }
             ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/styles",
+                "./node_modules/uikit/src/scss"
+              ]
+            },
             "scripts": [
+              //"node_modules/jquery/dist/jquery.js",
+             // "src/assets/scripts/scripts.min.js",
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"
+              "node_modules/hammerjs/hammer.min.js",
+              "./node_modules/uikit/dist/js/uikit.min.js",
+              "./node_modules/uikit/dist/js/uikit-icons.min.js"
             ]
           },
           "configurations": {

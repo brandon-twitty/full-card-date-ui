@@ -9,14 +9,14 @@
  * https://ionicframework.com/docs/layout/global-stylesheets
  */
 /* Custom SCSS/SASS Files */
-@import 'variables';
-@import 'mixins';
-@import 'custom';
+@import 'styles/variables';
+@import 'styles/mixins';
+@import 'styles/custom';
 /* UIKit */
-@import "variables-theme.scss";
-@import "mixins-theme.scss";
-@import "uikit-theme.scss";
-@import 'node_modules/aws-amplify-angular/theme.css';
+@import "node_modules/uikit/src/scss/variables-theme";
+@import "node_modules/uikit/src/scss/mixins-theme";
+@import "node_modules/uikit/src/scss/uikit-theme";
+@import '~aws-amplify-angular/theme.css';
 /* Core CSS required for Ionic components to work properly */
 ion-header{
   background-color: #fe5f67;
@@ -27,18 +27,18 @@ ion-header.a {
 .header-margin{
   margin: 15px;
 }
-@import "node_modules/@ionic/angular/css/core.css";
+@import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "node_modules/@ionic/angular/css/normalize.css";
-@import "node_modules/@ionic/angular/css/structure.css";
-@import "node_modules/@ionic/angular/css/typography.css";
-@import 'node_modules/@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "node_modules/@ionic/angular/css/padding.css";
-@import "node_modules/@ionic/angular/css/float-elements.css";
-@import "node_modules/@ionic/angular/css/text-alignment.css";
-@import "node_modules/@ionic/angular/css/text-transformation.css";
-@import "node_modules/@ionic/angular/css/flex-utils.css";
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
 

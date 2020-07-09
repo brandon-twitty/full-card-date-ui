@@ -31,30 +31,45 @@ export class AppComponent {
   sideMenu(){
     this.navigate = [
         {
-      title: "Profile",
-      url: "/profile",
-      icon: "contact"
+      title: 'Profile',
+      url: '/profile',
+      icon: 'contact'
     },
       {
-        title: "Dashboard",
-        url: "/dashboard",
-        icon: "home"
+        title: 'Dashboard',
+        url: '/dashboard',
+        icon: 'home'
       },
       {
-        title: "Order Cards",
-        url:"/create-cards",
-        icon: "barcode-outline"
+        title: 'Order Cards',
+        url: '/create-cards',
+        icon: 'barcode-outline'
       },
       {
-        title: "My Connections",
-        url:"/my-connections",
-        icon: "contacts"
+        title: 'My Connections',
+        url: '/my-connections',
+        icon: 'contacts'
       },
       {
-        title: "Login",
-        url:"/register/login",
-        icon: "home"
+        title: 'Login',
+        url: '/register/login',
+        icon: 'home'
+      },
+      {
+        title: 'Intro',
+        url: '/tabs/tabs1',
+        icon: 'home'
+      },
+      {
+        title: 'Meeting',
+        url: '/tabs/tabs2',
+        icon: 'home'
+      },
+      {
+        title: 'Contact',
+        url: '/tabs/tabs3',
+        icon: 'home'
       }
-    ]
+    ];
   }
 }
