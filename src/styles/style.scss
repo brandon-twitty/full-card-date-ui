@@ -5,7 +5,10 @@ UIKit library files
 @import 'variables';
 @import 'mixins';
 @import 'custom';
+/*@import "src/datcardstyleinvestor";*/
+@import "src/global";
+@import "src/datecard";
 /* UIKit */
-@import "variables-theme.scss";
+@import 'variables-theme.scss';
 @import "mixins-theme.scss";
 @import "uikit-theme.scss";

@@ -10,9 +10,7 @@ mutation CreateUser(
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner
@@ -29,9 +27,7 @@ mutation UpdateUser(
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner
@@ -48,9 +44,7 @@ mutation DeleteUser(
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner

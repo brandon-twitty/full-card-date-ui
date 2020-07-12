@@ -4,9 +4,10 @@ export class User {
         public username: string,
         public firstName: string,
         public lastName: string,
-        public aboutMe: string,
+        public bio: string,
         public email: string,
         public phoneNumber: string,
-        public imageUrl: string
+        public imageUrl: string,
+        public messageCount: number
     ){}
 }

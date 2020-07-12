@@ -14,6 +14,10 @@
         "categories": {
             "auth": {
                 "carddateapp041aadfd": {}
+            },
+            "function": {
+                "S3Triggerf81f33b7": {},
+                "carddateusers": {}
             }
         }
     }

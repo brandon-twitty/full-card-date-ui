@@ -4,5 +4,8 @@ type User @model @auth(rules: [{allow: owner}]) {
   firstName: String
   lastName: String
   bio: String
+  email: String
+  phoneNumber: String
   image: String
+  messageCount: Int
 }
