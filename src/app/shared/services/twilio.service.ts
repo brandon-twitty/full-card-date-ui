@@ -10,11 +10,11 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TwilioService {
-  startConvoUrl = 'https://x38gylh92e.execute-api.us-east-2.amazonaws.com/dev/api/start-conversation'
+  startConvoUrl = 'https://x38gylh92e.execute-api.us-east-2.amazonaws.com/dev/api/start-conversation';
   constructor(private http: HttpClient) { }
 
   sendInitialMessage(initialConvo: InitialConvo){
-    console.log('sending intial message to lambda=', initialConvo);
+    console.log('sending initial message to lambda=', initialConvo);
     JSON.stringify(initialConvo);
     return this.http.post(`${this.startConvoUrl}`, initialConvo, httpOptions);
   }
