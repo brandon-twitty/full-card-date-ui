@@ -7,12 +7,11 @@ query GetUser($id: ID!) {
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner
+    messageCount
   }
 }
 query ListUsers(
@@ -28,9 +27,7 @@ query ListUsers(
       lastName
       bio
       email
-      phoneNumber
       image
-      messageCount
       createdAt
       updatedAt
       owner

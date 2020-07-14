@@ -27,28 +27,28 @@ a {
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: local("Gilmer"), url("./fonts/Gilmer-Regular.woff") format("woff");
+    src: local("Gilmer"), url("../fonts/Gilmer-Regular.woff") format("woff");
 }
 @font-face {
     font-family: "Gilmer";
     font-style: normal;
     font-weight: 500;
     font-display: swap;
-    src: local("Gilmer Medium"), url("./fonts/Gilmer-Medium.woff") format("woff");
+    src: local("Gilmer Medium"), url("../fonts/Gilmer-Medium.woff") format("woff");
 }
 @font-face {
     font-family: "Gilmer";
     font-style: normal;
     font-weight: 600;
     font-display: swap;
-    src: local("Gilmer Bold"), url("./fonts/Gilmer-Bold.woff") format("woff");
+    src: local("Gilmer Bold"), url("../fonts/Gilmer-Bold.woff") format("woff");
 }
 @font-face {
     font-family: "Gilmer";
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: local("Gilmer Heavy"), url("./fonts/Gilmer-Heavy.woff") format("woff");
+    src: local("Gilmer Heavy"), url("../fonts/Gilmer-Heavy.woff") format("woff");
 }
 *[class*="wdac-container"] {
     width: 100%;

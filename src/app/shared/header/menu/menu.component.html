@@ -1,22 +1,27 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
+  <div *ngIf=""></div>
+  <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
+    <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
+    <a  (click)="logOut()" class="wdac-text-lowercase wdac-button">log out</a>
+  </div>
+  <ion-toolbar color="header">
+    <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
   <ion-grid>
     <ion-row>
-      <ion-title id="app-header">
-        <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
-          <img src="src/assets/carddate-logo.svg" alt="Date Card" class="cd-logo" />
-        </div>
-      </ion-title>
+      <ion-col>
+        <figure class="cd-avatar">
+          <amplify-s3-image-ionic [path]="user.imageUrl"
+                                  [options]="{'level': 'private'}" *ngIf="showPhoto">
+          </amplify-s3-image-ionic>
+        </figure>
+      </ion-col>
+      <ion-col>
+        <a style="color:white;" (click)="editProfilePage()">Edit Profile</a>
+      </ion-col>
     </ion-row>
-    <ion-row class="header-margin">
-      <a style="color:white;" routerLink="/dashboard">< - Dashboard</a>
-    </ion-row>
-    <ion-row>
 
-    </ion-row>
   </ion-grid>
 </ion-header>

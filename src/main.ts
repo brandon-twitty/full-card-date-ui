@@ -6,12 +6,10 @@ import { environment } from './environments/environment';
 
 // Amplify Configuration
 import PubSub from '@aws-amplify/pubsub';
-import Auth from '@aws-amplify/auth';
-import Storage from '@aws-amplify/storage';
-// fix build
-import AWSConfig from './aws-exports';
-Storage.configure(AWSConfig);
-Auth.configure(AWSConfig);
+import Amplify from 'aws-amplify';
+import amplify from './aws-exports';
+
+Amplify.configure(amplify);
 // End Amplify Configuration
 
 if (environment.production) {

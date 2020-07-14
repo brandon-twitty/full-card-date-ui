@@ -1,8 +1,9 @@
 // Ionic Variables and Theming. For more info, please see:
 // http://ionicframework.com/docs/theming/
-
+@import url('~assets/');
 /** Ionic CSS Variables **/
 :root {
+  --ion-color-header: #fe5f67 !important;
   /** AMS Amplify **/
   --amplify-primary-color: #ff6347;
   --amplify-primary-tint: #ff7359;

@@ -7,9 +7,7 @@ subscription OnCreateUser($owner: String!) {
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner
@@ -23,9 +21,7 @@ subscription OnUpdateUser($owner: String!) {
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner
@@ -39,9 +35,7 @@ subscription OnDeleteUser($owner: String!) {
     lastName
     bio
     email
-    phoneNumber
     image
-    messageCount
     createdAt
     updatedAt
     owner

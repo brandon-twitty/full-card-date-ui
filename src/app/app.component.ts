@@ -41,6 +41,11 @@ export class AppComponent {
         icon: 'home'
       },
       {
+        title: 'Create Profile',
+        url: '/create-profile',
+        icon: 'home'
+      },
+      {
         title: 'Order Cards',
         url: '/create-cards',
         icon: 'barcode-outline'
@@ -52,7 +57,7 @@ export class AppComponent {
       },
       {
         title: 'Login',
-        url: '/register/login',
+        url: '/register',
         icon: 'home'
       },
       {
