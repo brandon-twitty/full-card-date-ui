@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import {MenuComponent} from './menu/menu.component';
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {IonicModule} from '@ionic/angular';
+import {AmplifyAngularModule} from 'aws-amplify-angular';
+import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
+import {AmplifyIonicModule} from '@deniskkk/aws-amplify-angular';
 
 
 
@@ -10,7 +13,10 @@ import {IonicModule} from '@ionic/angular';
   declarations: [MenuComponent, ToolbarComponent],
   imports: [
     CommonModule,
-      IonicModule
+      IonicModule,
+    AmplifyAngularModule,
+    AmplifyUIAngularModule,
+    AmplifyIonicModule,
   ],
   exports: [MenuComponent]
 })

@@ -9,7 +9,24 @@ const awsmobile = {
     "aws_user_pools_web_client_id": "37u65ts75l6p3jmcfe13l6lg58",
     "oauth": {},
     "aws_user_files_s3_bucket": "carddate152028-dev",
-    "aws_user_files_s3_bucket_region": "us-east-1"
+    "aws_user_files_s3_bucket_region": "us-east-1",
+    "aws_dynamodb_all_tables_region": "us-east-1",
+    "aws_dynamodb_table_schemas": [
+        {
+            "tableName": "userProfile-dev",
+            "region": "us-east-1"
+        }
+    ],
+    "aws_cloud_logic_custom": [
+        {
+            "name": "api5b2f5c88",
+            "endpoint": "https://fm3vazsr28.execute-api.us-east-1.amazonaws.com/dev",
+            "region": "us-east-1"
+        }
+    ],
+    "aws_appsync_graphqlEndpoint": "https://xbob4pbn3zg35mwwehngw7fzcy.appsync-api.us-east-1.amazonaws.com/graphql",
+    "aws_appsync_region": "us-east-1",
+    "aws_appsync_authenticationType": "AMAZON_COGNITO_USER_POOLS"
 };
 
 

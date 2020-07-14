@@ -1,7 +1,7 @@
 export class LightUser {
-    _id: string;
+    ltUserId: string;
     ltFirstName: string;
-    ltLastName: string;
     ltPhoneNumber: string;
-    ltConversation_sid: [];
+    initialMessage: string;
+    ltConversationSid: [];
 }

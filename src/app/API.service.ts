@@ -4,7 +4,7 @@
 import { Injectable } from "@angular/core";
 import API, { graphqlOperation } from "@aws-amplify/api";
 import { GraphQLResult } from "@aws-amplify/api/lib/types";
-import * as Observable from "zen-observable";
+import { Observable } from "zen-observable-ts";
 
 export type CreateUserInput = {
   id?: string | null;
@@ -12,7 +12,10 @@ export type CreateUserInput = {
   firstName?: string | null;
   lastName?: string | null;
   bio?: string | null;
+  email?: string | null;
+  phoneNumber?: string | null;
   image?: string | null;
+  messageCount?: number | null;
 };
 
 export type ModelUserConditionInput = {
@@ -20,7 +23,10 @@ export type ModelUserConditionInput = {
   firstName?: ModelStringInput | null;
   lastName?: ModelStringInput | null;
   bio?: ModelStringInput | null;
+  email?: ModelStringInput | null;
+  phoneNumber?: ModelStringInput | null;
   image?: ModelStringInput | null;
+  messageCount?: ModelIntInput | null;
   and?: Array<ModelUserConditionInput | null> | null;
   or?: Array<ModelUserConditionInput | null> | null;
   not?: ModelUserConditionInput | null;
@@ -65,13 +71,28 @@ export type ModelSizeInput = {
   between?: Array<number | null> | null;
 };
 
+export type ModelIntInput = {
+  ne?: number | null;
+  eq?: number | null;
+  le?: number | null;
+  lt?: number | null;
+  ge?: number | null;
+  gt?: number | null;
+  between?: Array<number | null> | null;
+  attributeExists?: boolean | null;
+  attributeType?: ModelAttributeTypes | null;
+};
+
 export type UpdateUserInput = {
   id: string;
   username?: string | null;
   firstName?: string | null;
   lastName?: string | null;
   bio?: string | null;
+  email?: string | null;
+  phoneNumber?: string | null;
   image?: string | null;
+  messageCount?: number | null;
 };
 
 export type DeleteUserInput = {
@@ -84,7 +105,10 @@ export type ModelUserFilterInput = {
   firstName?: ModelStringInput | null;
   lastName?: ModelStringInput | null;
   bio?: ModelStringInput | null;
+  email?: ModelStringInput | null;
+  phoneNumber?: ModelStringInput | null;
   image?: ModelStringInput | null;
+  messageCount?: ModelIntInput | null;
   and?: Array<ModelUserFilterInput | null> | null;
   or?: Array<ModelUserFilterInput | null> | null;
   not?: ModelUserFilterInput | null;
@@ -113,7 +137,10 @@ export type CreateUserMutation = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -126,7 +153,10 @@ export type UpdateUserMutation = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -139,7 +169,10 @@ export type DeleteUserMutation = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -152,7 +185,10 @@ export type GetUserQuery = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -167,7 +203,10 @@ export type ListUsersQuery = {
     firstName: string | null;
     lastName: string | null;
     bio: string | null;
+    email: string | null;
+    phoneNumber: string | null;
     image: string | null;
+    messageCount: number | null;
     createdAt: string;
     updatedAt: string;
     owner: string | null;
@@ -182,7 +221,10 @@ export type OnCreateUserSubscription = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -195,7 +237,10 @@ export type OnUpdateUserSubscription = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -208,7 +253,10 @@ export type OnDeleteUserSubscription = {
   firstName: string | null;
   lastName: string | null;
   bio: string | null;
+  email: string | null;
+  phoneNumber: string | null;
   image: string | null;
+  messageCount: number | null;
   createdAt: string;
   updatedAt: string;
   owner: string | null;
@@ -230,7 +278,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -259,7 +310,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -288,7 +342,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -314,7 +371,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -343,7 +403,10 @@ export class APIService {
             firstName
             lastName
             bio
+            email
+            phoneNumber
             image
+            messageCount
             createdAt
             updatedAt
             owner
@@ -376,7 +439,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -395,7 +461,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner
@@ -414,7 +483,10 @@ export class APIService {
           firstName
           lastName
           bio
+          email
+          phoneNumber
           image
+          messageCount
           createdAt
           updatedAt
           owner

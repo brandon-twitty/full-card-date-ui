@@ -1,58 +1,53 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      profile
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<app-menu></app-menu>
 
 
+<ion-content>
 
-<ion-content [fullscreen]="true" >
+    <ion-grid>
+        <ion-row *ngIf="userCreated">
+            <div class="wdac-container wdac-padding" >
+                <p class="wdac-text-center">Add a photo and some more information about yourself!</p>
+            </div>
+        </ion-row>
+        <ion-row class="wdac-container">
+            <ion-item>
+            <h2 class="uk-align-center">My Profile</h2>
+            </ion-item>
+            <form class="uk-margin-auto-bottom">
+            <div class="form-group">
+                <div class="col-sm-12">
+                        <ion-icon *ngIf="showPhoto" name="upload" (click)="editPhoto()" size="2x" class="upload-icon"></ion-icon>
+                        <!-- Photo Picker -->
+                        <amplify-photo-picker-ionic *ngIf="!showPhoto"
+                                              path="image"[storageOptions]="{'level': 'private'}" (uploaded)="onImageUploaded($event)">
+                        </amplify-photo-picker-ionic>
 
+                </div>
+            </div>
+                <ion-item>
+                    <ion-label position="stacked">Your Username Name</ion-label>
+                    <ion-input type="text" name="username" [(ngModel)]="user.username"  placeholder="Username *" ></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Your First Name</ion-label>
+                    <ion-input type="text" name="firstName" class="wdac-input cd-margin-right" [(ngModel)]="user.firstName" placeholder="First name *" ></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Your Last Name</ion-label>
+                    <ion-input type="text" name="lastName" class="wdac-input cd-margin-right" [(ngModel)]="user.lastName"  placeholder="Last name *" ></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Your Phone Number</ion-label>
+                    <ion-input type="number" name="phoneNumber" class="wdac-input cd-margin-right" [(ngModel)]="user.phoneNumber"  placeholder="Phone Number *" ></ion-input>
+                </ion-item>
+                <ion-item>
+                    <ion-label position="stacked">Your Bio</ion-label>
+                    <textarea type="input" name="bio" class="wdac-input cd-margin-right" [(ngModel)]="user.bio" placeholder="Brief description about your self *"></textarea>
+                </ion-item>
 
-        <section>
-        <div class="cstl-main-content-margin row">
-            <ion-avatar class="header-margin cd-avatar ion-margin-bottom">
-              <!--<amplify-s3-image [path] ="user.imageUrl" [options]="{'level':'private'}"></amplify-s3-image>-->
-            </ion-avatar>
-              <!--<amplify-photo-picker></amplify-photo-picker>-->
-        </div >
-        </section>
-    <section class="container">
-
-      <div class="row wdac-container container">
-          <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
-              <div class="wdac-form-field wdac-dropshadow">
-
-              <input placeholder="First Name" type="text" class="form-control wdac-input" id="firstName" name="firstName" [(ngModel)]="user.firstName">
-              </div>
-          </div>
-      </div>
-       <div>
-           <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
-               <div class="wdac-form-field wdac-dropshadow">
-
-          <input placeholder="Last Name" type="text" class="form-control wdac-input" id="lastName" name="lastName" [(ngModel)]="user.lastName">
-               </div>
-      </div>
-       </div>
-      <div>
-          <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
-              <div class="wdac-form-field wdac-dropshadow">
-
-          <input placeholder="Phone Number" type="text" class="form-control wdac-input" id="phoneNumber" name="phoneNumber" [(ngModel)]="user.phoneNumber">
-              </div>
-      </div>
-      </div>
-      <div>
-      <div class="form-group row wdac-form-field-wrapper uk-margin-bottom" >
-          <div class="wdac-form-field wdac-dropshadow">
-              <input placeholder="About Me" type="text" class="form-control wdac-input" id="aboutMe" name="aboutMe" [(ngModel)]="user.aboutMe">
-          </div>
-      </div>
-      </div>
-      <button  class="uk-button uk-button-grey uk-width-1-1">Register</button>
-    </section>
+                    <button  (click)="updateProfile()" class="wdac-text-lowercase wdac-button">Update Profile</button>
+            </form>
+        </ion-row>
+    </ion-grid>
 </ion-content>
 
