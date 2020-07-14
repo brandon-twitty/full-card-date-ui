@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {InitialConvo} from '../shared/models/initial-convo';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {NavigationExtras, Router} from '@angular/router';
+import {TwilioService} from '../shared/services/twilio.service';
 
 @Component({
   selector: 'app-tab3',
@@ -13,12 +14,13 @@ export class Tab3Page implements OnInit {
   lightUsersName: any;
   initialMessage: any;
   phoneNumberForm: FormGroup;
-  constructor(private fb: FormBuilder, private router: Router) {
+  userId: any;
+  constructor(private fb: FormBuilder, private router: Router, private twilioService: TwilioService) {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state;
     this.lightUsersName = state.lightUsersName;
     this.initialMessage = state.initialMessage;
-    this.initialConvo.lightUserPhoneNumber = '';
+    this.initialConvo.From = '';
   }
   ngOnInit(){
     this.createPhoneForm();
@@ -29,14 +31,25 @@ export class Tab3Page implements OnInit {
       phoneNumber: ['']
     });
   }
-  sendInitialMessage(){
-    this.initialConvo.lightUsersName = this.lightUsersName;
-    this.initialConvo.initialMessage = this.initialMessage;
-    this.initialConvo.lightUserPhoneNumber = this.phoneNumberForm.controls.phoneNumber.value;
+  getUserProfile(){
+
+  }
+  setUpInitialMessage(){
+    this.initialConvo.lightUserName = this.lightUsersName;
+    this.initialConvo.Body = this.initialMessage;
+    this.initialConvo.From = this.phoneNumberForm.controls.phoneNumber.value;
+    this.initialConvo.To = this.userId;
     // TODO create service to send to Lambda
     console.log('the initialConvo Object', this.initialConvo);
 
   }
+  sendMessage(initialConvo){
+    this.twilioService.sendInitialMessage(initialConvo)
+        .subscribe(data => {
+          console.log(data);
+        });
+  }
+
   nextTab(tabRoute: string){
     const navigationExtras: NavigationExtras = {
       state: {
