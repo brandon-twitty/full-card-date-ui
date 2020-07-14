@@ -1,7 +1,7 @@
 export class InitialConvo {
-    lightUserId: string;
-    lightUserPhoneNumber: string;
-    lightUsersName: string;
-    initialMessage: string;
+    To: string;
+    lightUserName: string;
+    Body: string;
     userProfileId: string;
+    From: string;
 }

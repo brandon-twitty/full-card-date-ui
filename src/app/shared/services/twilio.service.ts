@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import {HttpHeaders} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
+import {InitialConvo} from '../models/initial-convo';
 
 
 const httpOptions = {
@@ -9,6 +10,12 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class TwilioService {
+  startConvoUrl = 'https://x38gylh92e.execute-api.us-east-2.amazonaws.com/dev/api/start-conversation'
+  constructor(private http: HttpClient) { }
 
-  constructor() { }
+  sendInitialMessage(initialConvo: InitialConvo){
+    console.log('sending intial message to lambda=', initialConvo);
+    JSON.stringify(initialConvo);
+    return this.http.post(`${this.startConvoUrl}`, initialConvo, httpOptions);
+  }
 }
