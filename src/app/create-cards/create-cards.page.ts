@@ -11,5 +11,8 @@ export class CreateCardsPage implements OnInit {
 
   ngOnInit() {
   }
+  getUser($event){
+    // receive user emitted
+  }
 
 }
