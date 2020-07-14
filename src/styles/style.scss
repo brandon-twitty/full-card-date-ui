@@ -6,9 +6,12 @@ UIKit library files
 @import 'mixins';
 @import 'custom';
 /*@import "src/datcardstyleinvestor";*/
-@import "src/global";
-@import "src/datecard";
+@import './node_modules/uikit/src/scss/variables.scss';
+@import './node_modules/uikit/src/scss/mixins-theme.scss';
+@import './node_modules/uikit/src/scss/uikit-theme';
 /* UIKit */
 @import 'variables-theme.scss';
 @import "mixins-theme.scss";
 @import "uikit-theme.scss";
+@import "src/global";
+@import "src/datecard";

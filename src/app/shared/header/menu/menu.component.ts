@@ -42,7 +42,7 @@ export class MenuComponent implements OnInit {
            result.bio,
            result.phoneNumber,
            result.image,
-            result.messageCount
+           result.messageCount
        );
        // this.showPhoto = !!result.image;
       }
@@ -55,6 +55,7 @@ export class MenuComponent implements OnInit {
     console.log('nav to edit profile');
   }
   emmitUser(){
+    console.log('emit user', this.user  ),
     this.User.emit(this.user);
   }
   logOut(){
