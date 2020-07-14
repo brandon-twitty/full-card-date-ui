@@ -60,21 +60,6 @@ export class AppComponent {
         url: '/register',
         icon: 'home'
       },
-      {
-        title: 'Intro',
-        url: '/tabs/tabs1',
-        icon: 'home'
-      },
-      {
-        title: 'Meeting',
-        url: '/tabs/tabs2',
-        icon: 'home'
-      },
-      {
-        title: 'Contact',
-        url: '/tabs/tabs3',
-        icon: 'home'
-      }
     ];
   }
 }
