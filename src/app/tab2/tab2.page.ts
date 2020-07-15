@@ -17,7 +17,6 @@ export class Tab2Page implements OnInit {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state;
     this.lightUsersName = state.lightUsersName;
-    this.initialMessage = '';
   }
   ngOnInit(): void {
     this.createMessageForm();
@@ -28,7 +27,7 @@ export class Tab2Page implements OnInit {
       initialMessage: ['']
     });
   }
-  nextTab(tabRoute: string){
+  nextTab2(tabRoute: string){
     const navigationExtras: NavigationExtras = {
       state: {
         lightUsersName: this.lightUsersName,

@@ -18,6 +18,7 @@ import {AmplifyUIAngularModule} from '@aws-amplify/ui-angular';
 import {AmplifyAngularModule} from 'aws-amplify-angular';
 import { HeaderModule } from './shared/header/header.module';
 import {MenuComponent} from './shared/header/menu/menu.component';
+import {HttpClientModule} from '@angular/common/http';
 
 /* Configure Amplify resources */
 // Amplify.configure(awsconfig);
@@ -30,6 +31,7 @@ import {MenuComponent} from './shared/header/menu/menu.component';
       ReactiveFormsModule,
       AmplifyAngularModule,
       AmplifyUIAngularModule,
+      HttpClientModule,
             IonicModule.forRoot(),
             AppRoutingModule,
             HeaderModule],

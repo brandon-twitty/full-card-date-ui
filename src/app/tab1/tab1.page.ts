@@ -14,13 +14,10 @@ export class Tab1Page implements OnInit {
   imageUrl: string;
   lightUsersName: any;
   nameForm: FormGroup;
-  initialConvo: InitialConvo = new InitialConvo();
+
   constructor(private api: APIService, private fb: FormBuilder, private router: Router) {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state;
-    this.initialConvo.lightUsersName = '';
-    this.initialConvo.initialMessage = '';
-    this.initialConvo.lightUserPhoneNumber = '';
   }
 
   ngOnInit() {

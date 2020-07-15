@@ -20,7 +20,6 @@ export class Tab3Page implements OnInit {
     const state = navigation.extras.state;
     this.lightUsersName = state.lightUsersName;
     this.initialMessage = state.initialMessage;
-    this.initialConvo.From = '';
   }
   ngOnInit(){
     this.createPhoneForm();
@@ -34,22 +33,18 @@ export class Tab3Page implements OnInit {
   getUserProfile(){
 
   }
-  setUpInitialMessage(){
-    this.initialConvo.lightUserName = this.lightUsersName;
-    this.initialConvo.Body = this.initialMessage;
-    this.initialConvo.From = this.phoneNumberForm.controls.phoneNumber.value;
-    this.initialConvo.To = this.userId;
+  sendInitialMessageUi(){
+    this.initialConvo.firstName = this.lightUsersName;
+    this.initialConvo.initialMessage = this.initialMessage;
+    this.initialConvo.phoneNumber = this.phoneNumberForm.controls.phoneNumber.value;
+    this.initialConvo.cardId = 'mark1234';
     // TODO create service to send to Lambda
     console.log('the initialConvo Object', this.initialConvo);
-
-  }
-  sendMessage(initialConvo){
-    this.twilioService.sendInitialMessage(initialConvo)
+    this.twilioService.sendInitialMessage(this.initialConvo)
         .subscribe(data => {
-          console.log(data);
+          console.log('message sent ', data);
         });
   }
-
   nextTab(tabRoute: string){
     const navigationExtras: NavigationExtras = {
       state: {
