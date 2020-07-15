@@ -17,29 +17,30 @@ export class Tab1Page implements OnInit {
   lightUsersName: any;
   nameForm: FormGroup;
   routeParams: Params;
+  cardId: any;
+  user;
   // user: User = new User();
 
   constructor(private api: APIService, private fb: FormBuilder, private router: Router, private activatedRoute: ActivatedRoute, private userService: UserService) {
     const navigation = this.router.getCurrentNavigation();
     const state = navigation.extras.state;
-    this.getRouteParams();
+
     this.getUserByUrlParameter();
+
   }
 
   ngOnInit() {
     // getUserImageUrlById()
     this.createNameForm();
   }
-  getRouteParams() {
-    // Route parameters
-    this.activatedRoute.params.subscribe( params => {
-      this.routeParams = params;
-    });
-  }
   getUserByUrlParameter(){
-    const cardId = this.routeParams;
-    this.userService.getUserByCardId(cardId).subscribe(data => {
-      console.log(data);
+    this.activatedRoute.params.subscribe( params => {
+      console.log('the pathparams', params);
+      // tslint:disable-next-line:no-shadowed-variable
+      const cardId = params['cardId'];
+      this.userService.getUserByCardId(cardId)
+          .subscribe(user => this.user = user);
+      console.log('user =', this.user);
     });
   }
   createNameForm(){
