@@ -35,7 +35,7 @@ export class Tab3Page implements OnInit {
   }
   sendInitialMessageUi(){
     this.initialConvo.firstName = this.lightUsersName;
-    this.initialConvo.message = this.initialMessage;
+    this.initialConvo.initialMessage = this.initialMessage;
     this.initialConvo.phoneNumber = this.phoneNumberForm.controls.phoneNumber.value;
     this.initialConvo.cardId = 'mark1234';
     // TODO create service to send to Lambda
