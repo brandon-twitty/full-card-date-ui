@@ -1,6 +1,6 @@
 export class InitialConvo {
     phoneNumber: string;
     firstName: string;
-    message: string;
+    initialMessage: string;
     cardId: string;
 }
