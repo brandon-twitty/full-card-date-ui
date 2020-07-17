@@ -19,6 +19,8 @@ import {AmplifyAngularModule} from 'aws-amplify-angular';
 import { HeaderModule } from './shared/header/header.module';
 import {MenuComponent} from './shared/header/menu/menu.component';
 import {HttpClientModule} from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 /* Configure Amplify resources */
 // Amplify.configure(awsconfig);
@@ -34,7 +36,8 @@ import {HttpClientModule} from '@angular/common/http';
       HttpClientModule,
             IonicModule.forRoot(),
             AppRoutingModule,
-            HeaderModule],
+            HeaderModule,
+            ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })],
   providers: [
     StatusBar,
     SplashScreen,

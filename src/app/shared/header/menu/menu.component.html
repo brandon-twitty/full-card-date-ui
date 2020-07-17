@@ -4,13 +4,18 @@
     <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
     <a  (click)="logOut()" class="wdac-text-lowercase wdac-button">log out</a>
   </div>
+  <div *ngIf=""></div>
+  <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
+    <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
+    <a  (click)="signIn()" class="wdac-text-lowercase wdac-button">log out</a>
+  </div>
   <ion-toolbar color="header">
     <ion-buttons slot="end">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
   </ion-toolbar>
   <ion-grid>
-    <ion-row>
+    <ion-row *ngIf="showPhoto">
       <ion-col>
         <figure class="cd-avatar">
           <amplify-s3-image-ionic [path]="user.imageUrl"

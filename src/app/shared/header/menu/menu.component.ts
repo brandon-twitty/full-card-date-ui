@@ -58,6 +58,9 @@ export class MenuComponent implements OnInit {
     console.log('emit user', this.user  ),
     this.User.emit(this.user);
   }
+  signIn(){
+
+  }
   logOut(){
     Auth.signOut({ global: true })
         .then(data => {
