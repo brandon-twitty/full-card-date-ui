@@ -43,7 +43,7 @@ export class AuthComponent implements OnInit {
                   userId: Auth.currentUserInfo()
                 }
               };
-              this.router.navigate(['/dashboard'], navigationParams);
+              this.router.navigate(['/profile'], navigationParams);
             }
           });
       this.showLoginComponent = true;
