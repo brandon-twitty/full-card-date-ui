@@ -1,6 +1,6 @@
 
 <ion-header id="app-header" class="wdac-bg-primary" [translucent]="true">
-
+<app-menu></app-menu>
     <div class="wdac-container wdac-height-1-1 wdac-flex wdac-flex-middle wdac-padding-x">
         <img src="../assets/carddate-logo.svg" alt="Card.Date" class="cd-logo" />
     </div>
@@ -25,7 +25,7 @@
                 <div class="wdac-flex">
                     <input type="text" name="firstName" class="wdac-input cd-margin-right" formControlName="ltFirstName" placeholder="First name *" />
 
-                    <button  (click)="nextTab(':userId/tab2')" class="wdac-text-lowercase wdac-button">Continue</button>
+                    <button  (click)="nextTab(':cardId/tab2')" class="wdac-text-lowercase wdac-button">Continue</button>
                 </div>
             </form>
         </ion-row>

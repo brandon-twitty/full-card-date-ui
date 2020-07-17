@@ -36,7 +36,7 @@ export class AuthComponent implements OnInit {
             console.log('twittys Auth state = ', authState.state);
             const user = Auth.currentUserInfo();
             console.log('authorized user =', user);
-            this.goToProfileOrDashboard();
+            // this.goToProfileOrDashboard();
             if (authState.state === 'signedIn') {
               const navigationParams: NavigationExtras = {
                 state: {
