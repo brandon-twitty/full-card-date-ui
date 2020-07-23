@@ -3,10 +3,6 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  },
 
   {
     path: 'dashboard',
@@ -14,7 +10,7 @@ const routes: Routes = [
   },
 
   {
-    path: 'register',
+    path: '',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
   {
@@ -28,7 +24,8 @@ const routes: Routes = [
   {
     path: 'create-cards',
     loadChildren: () => import('./create-cards/create-cards.module').then( m => m.CreateCardsPageModule)
-  },  {
+  },
+  {
     path: 'view-profile',
     loadChildren: () => import('./view-profile/view-profile.module').then( m => m.ViewProfilePageModule)
   },
