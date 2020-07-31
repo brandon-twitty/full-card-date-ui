@@ -28,14 +28,16 @@ const routes: Routes = [
   {
     path: 'create-cards',
     loadChildren: () => import('./create-cards/create-cards.module').then( m => m.CreateCardsPageModule)
-  },  {
+  },
+  {
     path: 'view-profile',
     loadChildren: () => import('./view-profile/view-profile.module').then( m => m.ViewProfilePageModule)
   },
   {
     path: 'create-profile',
     loadChildren: () => import('./create-profile/create-profile.module').then( m => m.CreateProfilePageModule)
-  }
+  },
+
 
 ];
 @NgModule({
